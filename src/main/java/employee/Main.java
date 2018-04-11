@@ -8,7 +8,7 @@ public class Main {
 
         Employee salaryEmployee = new SalariedEmployee("Tony", "Stark", "555-33-5545", 200000.00);
 
-        Employee commissionEmployee = new CommissionedEmployee("Wade", "Wilson", "666-33-4434", 5000.00, 25.0);
+        Employee commissionEmployee = new CommissionedEmployee("Wade", "Wilson", "666-33-4434", 100, 20);
 
         Employee basePlusComEmployee = new BasePlusCommissionEmployee("Zee", "Thompsonowak", "777-77-7777", 5000.00, 0.5, 165.50);
 
@@ -17,13 +17,16 @@ public class Main {
 
         //System.out.println(hourEmployee.getFirstName());
 
+        //System.out.println(((CommissionedEmployee) commissionEmployee).getCommissionRate());
+
+        System.out.println(commissionEmployee.earnings());
 
         System.out.println("================================================");
         Employee[] staff = new Employee[]{hourEmployee, salaryEmployee, commissionEmployee, basePlusComEmployee};
 
 
         for(Employee eStaff : staff){
-            System.out.println(eStaff.earnings());
+            System.out.println( eStaff.getFirstName() + " | Earnings: $" + eStaff.earnings());
         }
 
 

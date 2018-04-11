@@ -14,7 +14,7 @@ public class Employee { // parent class
         this.socialSecurityNumber = socialSN;
         count++;
 
-        //System.out.printf("Constructed employee %s %s | count=d%w%n", firstName, lastName, count);
+        System.out.printf("Constructed employee %s %s | count=%d%n", firstName, lastName, count);
     }
 
 

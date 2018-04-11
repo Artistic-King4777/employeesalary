@@ -6,7 +6,7 @@ public class CommissionedEmployee extends Employee{
     private double commissionRate;
 
 
-    public CommissionedEmployee(String firstN, String lastN, String socialSN, double grossSales, double commmissionRate){
+    public CommissionedEmployee(String firstN, String lastN, String socialSN, double grossSales, double commissionRate){
         super(firstN, lastN, socialSN);
         this.grossSales = grossSales;
         this.commissionRate = commissionRate;
@@ -14,7 +14,7 @@ public class CommissionedEmployee extends Employee{
 
     @Override
     public double earnings(){
-        return ((commissionRate / 100) * grossSales);
+        return getCommissionRate() * getGrossSales();
     }
 
 
